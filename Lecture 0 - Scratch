@@ -1,0 +1,222 @@
+Computer Science. Computational Thinking. 
+Problem Solving: Inputs, Outputs. 
+Representation: Unary, Binary, Decimal, ASCII, Unicode, RGB. Abstraction. 
+Algorithms. Running Times. Pseudocode. 
+Scratch: Functions, Arguments, Return Values; 
+Variables; 
+Boolean Expressions, 
+Conditionals; 
+Loops; 
+Events; 
+Threads.
+
+
+===Representation: Unary, Binary, Decimal, ASCII, Unicode, RGB. Abstraction. 
+Algorithms. Running Times. Pseudocode. 
+
+		Unary	human figure 			base-1 
+		Binary 	binary digit 01 		base-2
+			^^         ^  bit 0 or 1 Off On
+
+2^2 2^1 2^0
+4   2   1		4x0 + 	2x0 + 	1x0
+0   0   0		0     	0     	0
+
+000	0
+001 	1		off	off	on
+010	2		off	on	off	notice i didnt turn on the same bulb
+011	3		off	on	on
+100	4		on	off	off
+101	5		on	off	on
+110	6		on	on	off
+111	7		on 	on	on
+	
+	8 different patterns = permut them
+
+421
+1000		on	off	off	off
+						notice the pattern 2^6 2^5 2^4 2^3 2^2
+								   64  32  16  8   4
+		Decimal 0123456789 notice 10 digits	base-10
+
+		123
+		^^^
+		  ^ ----------------->	1's place
+		 ^  ----------------->	10's place
+		^   ----------------->  100's place
+		so 123 = 100 x 1  	+ 	10 x 2		+ 	1 x 3
+		       = 100 		+	20		+	1
+ 		       = 123
+			10^2			10^1			10^0
+why is this 	
+
+now add a 4th bit	 8 4 2 1 
+			 1000
+
+bit 	each bit is a light bulb
+byte	8 bits in byte
+
+Binary 	binary digit	bi   t	 -----------------> bit
+	^^         ^  
+
+1  1 1 1 1 1 1 1			what does this # represent? 
+1286432168 4 2 1			= sum 255
+128+64+32+16+8+4+2+1			sum 255	thus 0 to 255	thus total 256 possibilities
+
+how does computer represent letter A?
+using units of 8?
+assign A to 1, B to 2 but then how to represent 0, 1, or 2?
+solution
+
+A is represented by decimal # 65	0100 0001
+				64 + 1  
+				1  1 1 1   1 1 1 1
+				128 64 32 16 8 4 2 1	
+				0   1  0  0  0 0 0 1  --> 64 + 1
+				    64             +1            = 65
+B is 66
+C is 67
+ASCII 		American Standard Code for Information Interchange
+hexadecimal		0123456789 A B C D E F G
+			0123456789 10111213141516
+65	64 1		012345678
+use green grid for mapping
+0 NUL	16 DLE	32 SP	48 0	64 @	80 P	96 `	112 p
+1 SOH	17 DC1	33 !	49 1	65 A 	81 Q 	97 a	113 q
+2 STX	18 DC2	34 "	50 2 	66 B 	82 R	98 b	114 r
+3 ETX	19 DC3	35 #	51 3	67 C	83 S 	99 c	115 s
+4 EOT	20 DC4	36 $	52 4	68 D	84 T	100 d	116 t
+5 ENQ	21 NAK	37 %	53 5	69 E	85 U 	101 e	117 u
+6 ACK	22 SYN	38 &	54 6 	70 F	86 V	102 f	118 v
+7 BEL	23 ETB	39 '	55 7	71 G	87 W	103 g	119 w
+8 BS	24 CAN	40 (	56 8	72 H	88 X 	104 h	120 x
+9 HT	25 EM	41 )	57 9	73 I	89 Y	105 i 	121 y
+10 LF	26 SUB	42 *	58 :	74 J	90 Z	106 j	122 z
+11 VT	27 ESC	43 +	59 ;	75 K	91 [	107 k	123 {
+12 FF	28 FS	44 ,	60 <	76 L	92 \	108 l	124 |
+13 CR	29 GS	45 -	61 =	77 M	93 ]	109 m	125 }
+14 SO	30 RS 	46 .	62 >	78 N	94 ^	110 n	126 ~
+15 SI	31 US	47 /	63 ?	79 O	95 _	111 o	127 DEL
+
+This is a text message
+what does this represent using green grid? 
+0100 1000 		0100 1001		0010 0001
+8 + 8 + 8 
+24 bits
+	
+72 73 33
+H  I  !
+
+But how to represent # 1?
+so 1 is 49
+
+a in different languages
+12345678
+
+===ASCII, Unicode, Emoji
+emojis -- these are a technical solution to the problem.
+8 bits to represent a letter
+ASCII represents 256 total characters (0 to 255)
+But 256 is enough for English but not other languages
+How to represent accented letters and emojis? Add another digit. Throw hardware at the problem
+So use 4 more bytes
+so going from 	8 bytes to 	16 bytes to 	43 bytes
+memory is abundant so throw hardware at the problem.
+Thus solution to ASCII constraint is Unicode
+
+0	01	0-9	0-9A-G	  0-255	     255 255 255
+Unary, Binary, Decimal, ASCII,    Unicode,   RGB.   		Abstraction. 
+		 	American  Languages  Color
+				  Emojis
+
+===Skin Tone emoji
+5 skin tones - how to create?
+1 font repeated 5 times? unicode font
+1st bit represents default structure
+2nd bit human skin tones
+thus 2x as many bits, but not 5x as many bits
+
+but emoji gender caused an issues
+ex. couple emoji is 2 humans plus middle top heart.
+1 bit set for character on left
+1 bit set for character on right
+1 bit set for middle-top charactor then assemble by reusing the same patterns of bits
+
+note lack of foresight for building an American centric, gender centric, single character
+but eva
+
+===RGB
+red green blue
+every dot on screen # for Red, # for Green, # for Blue
+
+murky green 
+Emoji Face with Tears of Joy
+pixelated when zoom in
+each dot is 3 bytes = 3bytes*8bitsper = 24 bits
+so then what is a video?
+pixels changing values over time
+picture book showing Grumpy Cloud drawing = analog video
+sequence of images flying
+Hollywood movie 24 FPS Frames Per Second = 24 images per second
+TV 30 frames per second
+smooth movement is in fact seeing a seqeuence of images
+
+Music digitized = how to represent musical notes under the hood?
+1st #Hertz value = hertz per second
+2nd # Loudness of 
+3rd # Duration
+middy, mp3, acc file extension --> different forms of representation for sound
+
+
+===Abstraction = simplification of something thus focus on high level goals and not on the low leve details
+
+car = abstration. dont know how engine works, how parts are moving, but mechanic knows.
+You just want to think and operate at this higher level of abstraction
+Abstraction - focus on higher level. Mechanics know the engine but you dont need to.
+
+Computer scientist would call this an algorithm = how you solve certain problems
+
+ 		 	input --> 	algorithm	--> output
+
+===Implementation Details
+contacts icon on iPhone
+alaphabetized by name
+search, the autocomplete
+H will show Hagrid Harry Hermine
+typically you could start at top and search each one
+but for larger data sets, that gets slow
+
+so how to speed up search for John Harvard?
+Yellow pages example
+Search turning page by page.
+Correct? Yes. Tedious but yes correct. Presume alaphabetized
+Search 2 pages at a time. But not correct b/c might accidently the page.
+Notice this is twice as fast.
+
+Divide problem. Look at middle of Yellow phone book. Gone from 1000 pages to 500
+then 1/2 again is 250. Tear problem in 1/2 each time.
+Implication for performace?
+Graph Size of Problem vs Time to solve
+n
+n/2
+logbase2 n
+
+
+===Pseudocode
+
+well defined behavior for every possible scenario
+								VERBS = Functions
+
+1 Pick up phone book						Pick up
+2 Open to middle of phone book					Open to
+3 Look at page							Look at
+4 If person is on page
+5	Call person							Call
+6 Else if person is earlier in book
+7	Open to middle of left half of book				Open to
+8	Go back to line 3
+9 Else if person is later in book
+10	Open to middle or right half of book				Open to
+11	Go back to line 3
+12 Else
+13 	Quit								Quit
